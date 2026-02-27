@@ -40,3 +40,19 @@ async function populateSelectElements() {
 }
 
 await populateSelectElements();
+
+//enter an amount - only allow integers and floats with two decimals
+const input = document.querySelector("#amount");
+input.addEventListener("input", function (evt) {
+    const value = evt.target.value.trim();
+    if (value === "") {
+        input.value = 1;
+        return
+    } if (!Number(value)) {
+        input.value = value.slice(0, -1)
+        return
+    } if (Number(value) && value.includes(".")) {
+        const arr = input.value.split(".");
+        arr[1].length > 2 ? input.value = arr.join(".").slice(0, -1) : input.value = arr.join(".")
+    }
+})
