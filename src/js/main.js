@@ -3,7 +3,7 @@ import "../scss/main.scss";
 //es6 modules
 import {getCountriesCurrencies} from "./modules/api/getCountriesCurrencies";
 import {getSupportedCurrencies} from "./modules/api/getSupportedCurrencies";
-
+import {setCountriesSelects} from "./modules/ui/forms/setCountriesSelects";
 
 //set supported country names in select-elements based on supported currencies in frankfurter api
 const fromCountries = document.querySelector("#from-country");
