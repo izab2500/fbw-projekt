@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Convert currencies between countries, calculate exchange rates for any amount and view 10 years of historical rate data.">
+  <title>country currency converter</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+        <circle id="circle" cx="40" cy="40" r="35" />
+        <text id="dollar-symbol" x="40%" y="43%" font-size="50" font-family="Arial" fill="gold" text-anchor="middle"
+          alignment-baseline="middle">$</text>
+      </svg>
+      <h1>country currency converter</h1>
+    </div>
+  </header>
+  <main>
+    <!--app error-->
+    <div id="app-error" role="alert"></div>
+    <!--app-->
+    <div id="app">
+      <!--controllers-->
+      <form autocomplete="off">
+        <div>
+          <label for="amount">enter an amount</label>
+          <input type="text" value="1" name="amount" id="amount" aria-required="true">
+        </div>
+        <div class="flex-container" id="parent-from-to">
+          <div>
+            <label for="from-country">from</label>
+            <select name="from-country" id="from-country" aria-required="true"></select>
+          </div>
+          <div>
+            <button type="button" id="swap-btn">
+              &harr;
+            </button>
+          </div>
+          <div>
+            <label for="to-country">to</label>
+            <select name="to-country" id="to-country" aria-required="true"></select>
+          </div>
+          <div class="same-currency-error" id="same-currency-error" role="alert" hidden></div>
+        </div>
+        <button type="button" id="convert-btn">convert</button>
+      </form>
+      <!--show currency value pairs-->
+      <div id="currency-pair-container">
+        <div id="exchange-rate" role="status"></div>
+        <div id="exchange-rate-error" class="exchange-rate-error" role="alert" hidden></div>
+      </div>
+      <!--linechart chart.js-->
+      <div class="linechart-container">
+        <canvas id="linechart"></canvas>
+        <div id="chart-error" role="alert" hidden></div>
+        <div id="spinner-chart" class="spinner" hidden></div>
+        <!--for assistive technology users-->
+        <table id="table" class="visibility-hidden" role="status"></table>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>made by:</p>
+    <address>
+      <a href="mailto:ziba2500@student.miun.se">ziba2500@student.miun.se</a>
+    </address>
+  </footer>
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>

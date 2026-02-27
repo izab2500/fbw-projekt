@@ -1,0 +1,22 @@
+@use "../abstract/animations";
+
+header {
+    height: 100px;
+
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            position: relative;
+            top: 10px;
+        }
+    }
+
+    #dollar-symbol {
+        animation: colorChange 4s infinite;
+
+    }
+}

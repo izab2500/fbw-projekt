@@ -1,0 +1,9 @@
+//base
+@use "./partials/base/reset";
+@use "./partials/base/base";
+//layout
+@use "./partials/layout/body";
+@use "./partials/layout/header";
+@use "./partials/layout/app.scss";
+@use "./partials/layout/footer";
+

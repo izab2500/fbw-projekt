@@ -1,0 +1,23 @@
+@keyframes colorChange {
+    0% {
+        fill: goldenrod;
+    }
+
+    50% {
+        fill: #c0c0c0;
+    }
+
+    100% {
+        fill: #cd7f32;
+    }
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

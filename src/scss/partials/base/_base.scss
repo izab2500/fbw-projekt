@@ -1,0 +1,115 @@
+@use '../themes/light' as light;
+@use '../themes/dark' as dark;
+
+%base-font-size {
+font-size: 1.2rem;
+}
+
+%base-font-family{
+        font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: light.$body-main-bg;
+  color: light.$body-text;
+   line-height: 1.5;
+
+    h1{
+        @extend %base-font-family;
+        font-size: 1.5rem;
+    }
+
+     footer {
+        @extend  %base-font-family;
+        @extend %base-font-size;
+    }
+
+    label,
+    input,
+    select,
+    button {
+        font-family: 'Courier New', monospace;
+        @extend %base-font-size;
+        text-transform: capitalize;
+    }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: dark.$body-main-bg;
+    color: dark.$body-text;
+  }
+
+  header,
+footer {
+  background-color: light.$header-footer-bg;
+  color: light.$header-footer-text;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: dark.$header-footer-bg;
+    color: dark.$header-footer-text;
+  }
+}
+
+a {
+  color: light.$header-footer-text;
+  margin-left: 5px;
+  font-style: normal;
+
+  @media (prefers-color-scheme: dark) {
+    color: dark.$header-footer-text;
+  }
+}
+
+main {
+  color: light.$body-text;
+  margin-top: 40px;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: dark.$body-main-bg;
+    color: dark.$main-text;
+  }
+}
+
+#swap-btn {
+  background-color: light.$swap-btn-bg;
+  color: light.$swap-btn-text;
+  font-size: 2rem;
+  border: 1px solid black;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: dark.$swap-btn-bg;
+    color: dark.$swap-btn-text;
+    border: 1px solid #ffff;
+
+  }
+}
+
+#convert-btn {
+  background-color: light.$convert-btn-bg;
+  color: light.$convert-btn-text;
+  height: 50px;
+  width: 250px;
+  padding-inline: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: dark.$convert-btn-bg;
+    color: dark.$convert-btn-text;
+  }
+
+}
+
+#currency-pair-container {
+  margin-top: 25px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: light.$body-text;
+
+  @media (prefers-color-scheme: dark) {
+    color: dark.$body-text;
+  }
+}
+}
