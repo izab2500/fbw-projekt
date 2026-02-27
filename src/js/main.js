@@ -4,6 +4,8 @@ import "../scss/main.scss";
 import {getCountriesCurrencies} from "./modules/api/getCountriesCurrencies";
 import {getSupportedCurrencies} from "./modules/api/getSupportedCurrencies";
 import {setCountriesSelects} from "./modules/ui/forms/setCountriesSelects";
+import { swapSelectElements } from "./modules/ui/swapSelectElements";
+
 
 //set supported country names in select-elements based on supported currencies in frankfurter api
 const fromCountries = document.querySelector("#from-country");
@@ -56,3 +58,7 @@ input.addEventListener("input", function (evt) {
         arr[1].length > 2 ? input.value = arr.join(".").slice(0, -1) : input.value = arr.join(".")
     }
 })
+
+//swap select elements
+const swapBtn = document.querySelector("#swap-btn");
+swapBtn.addEventListener("click", swapSelectElements);
