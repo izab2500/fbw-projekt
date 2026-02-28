@@ -44,6 +44,7 @@ export function linechart(canvasEl, xaxis, currenciesArr, label) {
                     tension: 0.3,
                     pointBackgroundColor:"lightgreen",
                     pointBorderColor:"lightgreen",
+                    pointBorderWidth:7,
                 },
             ],
         },
