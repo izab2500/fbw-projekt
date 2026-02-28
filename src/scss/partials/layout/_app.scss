@@ -64,9 +64,10 @@ main {
         .visibility-hidden {
             position: absolute;
             top:0;
-            left:0;
-            font-size: 0.5rem;
-            visibility:hidden;
+            left: -99999px;
+            width:1px;
+            height:1px;
+            overflow:hidden;
         }
     }
 
